@@ -34,7 +34,7 @@ Transactions are classified as recurring if they have consistent intervals and a
 # Future Improvements:
 
 1. Enhanced error handling and logging
-2. Implementation of authentication and rate limiting
+2. Implementation of authentication
 3. Use of HTTPS for secure communication
 4. Containerisation using Docker for easier deployment and scaling
 5. Comprehensive API status code handling for better error reporting
