@@ -3,22 +3,22 @@
 This project identifies recurring transactions from a set of bank transactions.
 How to Run
 
-Install dependencies:
+# Install dependencies:
 pip install -r requirements.txt
 
-Run the Flask API:
+# Run the Flask API:
 python app.py
 
 Send a POST request to http://127.0.0.1:5000/identify-recurring with JSON payload:
 json:
 
-{
+''' {
   "transactions": [
     {"description": "Spotify", "amount": -14.99, "date": "2021-01-29"},
     {"description": "Spotify", "amount": -14.99, "date": "2020-12-29"},
     {"description": "One-off", "amount": -50.00, "date": "2021-02-15"}
   ]
-}
+} '''
 
 
 Logic of recurring_transactions.py
