@@ -19,7 +19,10 @@ def identify_recurring_transactions(transactions: List[Transaction]) -> List[Tup
         amounts = [t.amount for t in group]
 
         if is_recurring(intervals, amounts):
-            recurring_transactions.extend([(t.description, t.amount, t.date.strftime('%Y-%m-%d')) for t in group])
+            recurring_transactions.extend([
+                (t.description, t.amount, t.date.strftime('%Y-%m-%d'))
+                for t in group
+            ])
 
     return recurring_transactions
 
@@ -40,10 +43,10 @@ def is_recurring(intervals: List[int], amounts: List[float]) -> bool:
 if __name__ == "__main__":
     # Example usage
     sample_transactions = [
-        Transaction.from_dict({"description": "Spotify", "amount": -14.99, "date": "2021-01-29"}),
-        Transaction.from_dict({"description": "Spotify", "amount": -14.99, "date": "2020-12-29"}),
-        Transaction.from_dict({"description": "Spotify", "amount": -14.99, "date": "2020-11-29"}),
-        Transaction.from_dict({"description": "One-off purchase", "amount": -50.00, "date": "2021-02-15"}),
+        Transaction("Spotify", -14.99, datetime(2021, 1, 29)),
+        Transaction("Spotify", -14.99, datetime(2020, 12, 29)),
+        Transaction("Spotify", -14.99, datetime(2020, 11, 29)),
+        Transaction("One-off purchase", -50.00, datetime(2021, 2, 15)),
     ]
 
     recurring_transactions = identify_recurring_transactions(sample_transactions)
