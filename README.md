@@ -1,4 +1,4 @@
-Recurring Transactions Identifier
+#Recurring Transactions Identifier
 
 This project identifies recurring transactions from a set of bank transactions.
 How to Run
