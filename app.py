@@ -25,7 +25,7 @@ def identify_recurring():
 
     recurring = identify_recurring_transactions(transactions)
     
-    # Convert datetime objects to strings for JSON serialization
+    # Convert datetime objects to strings for JSON serialisation
     recurring_json = [
         {"description": r[0], "amount": r[1], "date": r[2]}
         for r in recurring
