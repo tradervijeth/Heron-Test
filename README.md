@@ -12,16 +12,16 @@ python app.py
 Send a POST request to http://127.0.0.1:5000/identify-recurring with JSON payload:
 json:
 
-''' {
+{
   "transactions": [
     {"description": "Spotify", "amount": -14.99, "date": "2021-01-29"},
     {"description": "Spotify", "amount": -14.99, "date": "2020-12-29"},
     {"description": "One-off", "amount": -50.00, "date": "2021-02-15"}
   ]
-} '''
+}
 
 
-Logic of recurring_transactions.py
+# Logic of recurring_transactions.py
 The script identifies recurring transactions by:
 
 1. Grouping transactions by description
@@ -31,7 +31,7 @@ The script identifies recurring transactions by:
 
 Transactions are classified as recurring if they have consistent intervals and amounts.
 
-Future Improvements:
+# Future Improvements:
 
 1. Enhanced error handling and logging
 2. Implementation of authentication and rate limiting
