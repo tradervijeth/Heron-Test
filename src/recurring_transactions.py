@@ -1,7 +1,7 @@
 from typing import List, Tuple
 from collections import defaultdict
 from datetime import timedelta
-from models import Transaction
+from .models import Transaction
 
 def identify_recurring_transactions(transactions: List[Transaction]) -> List[Tuple[str, float, str]]:
     grouped_transactions = defaultdict(list)
